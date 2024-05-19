@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Elong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Toko Bik Elong</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="https://wa.me/+6285379348822">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Selamat Datang di Toko Bik Elong</h1>
+            <p>Kami menjual Telor, Gula,Terigu dll dengan harga mulai Rp12.000.</p>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Produk Kami</h2>
+            <div class="products">
+                <div class="product">
+                    <h3>Telor</h3>
+                    <p>telor 1Kg</p>
+                    <p>Harga: Rp32.000</p>
+                    <button class="buyButton" data-product="Telor" data-price="32000">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Gula</h3>
+                    <P>Gula 1Kg</P>
+                    <p>Harga: Rp18.500</p>
+                    <button class="buyButton" data-product="Gula" data-price="18500">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Terigu</h3>
+                    <p>Trigu 1kg </p>
+                    <p>Harga: Rp12.000</p>
+                    <button class="buyButton" data-product="Terigu" data-price="12000">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Beras</h3>
+                    <p>Beras 1kg </p>
+                    <p>Harga: Rp14.000</p>
+                    <button class="buyButton" data-product="Beras" data-price="14000">Beli</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="section">
+        <div class="container">
+            <div class="products">
+                <div class="product">
+                    <h3>Minyak Goreng</h3>
+                    <p>Minyak Goreng 1L</p>
+                    <p>Harga: Rp17.500</p>
+                    <button class="buyButton" data-product="Minyak Goreng" data-price="17500">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Mentega</h3>
+                    <P>Mentega 200g</P>
+                    <p>Harga: Rp11.000</p>
+                    <button class="buyButton" data-product="Mentega" data-price="11000">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Bawang Merah</h3>
+                    <p>Bawang Merah 250g</p>
+                    <p>Harga: Rp17.000</p>
+                    <button class="buyButton" data-product="Bawang Merah" data-price="17000">Beli</button>
+                </div>
+                <div class="product">
+                    <h3>Bawang Putih</h3>
+                    <p>Bawang Putih 250g </p>
+                    <p>Harga: Rp15.000</p>
+                    <button class="buyButton" data-product="Bawang Putih" data-price="15000">Beli</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart-section" class="section" style="display:none;">
+        <div class="container">
+            <h2>Yang di beli</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: <span id="total-price">Rp0</span></p>
+            <button id="checkoutButton">Beli</button>
+        </div>
+    </section>
+
+    <section id="form-section" class="section" style="display:none;">
+        <div class="container">
+            <h2>Isi Formulir Pembelian</h2>
+            <form id="purchaseForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Alamat:</label>
+                <input type="text" id="address" name="address" required>
+                <input type="hidden" id="product" name="product">
+                <input type="hidden" id="total" name="total">
+                <button type="submit">Kirim</button>
+            </form>
+            <p id="confirmationMessage" style="display:none;">Barang akan segera diantar!</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
